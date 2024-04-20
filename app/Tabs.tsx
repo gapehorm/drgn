@@ -38,7 +38,7 @@ const Tabs = () => {
 
             </div>
           </> : <div className='flex flex-col  justify-center items-center text-center'>
-            <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Heading</p>
+            <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Whitelist!</p>
           </div>}
       </div>
     </main >
