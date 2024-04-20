@@ -29,7 +29,7 @@ const Tabs = () => {
                */}
 
 
-              <Button sitename='Example' sitelink='https://example.com' />
+              <Button sitename='Discord' sitelink='https://discord.gg/An6GNtkJ' />
               <Button sitename='Example' sitelink='https://example.com' />
               <Button sitename='Example' sitelink='https://example.com' />
               <Button sitename='Example' sitelink='https://example.com' />
