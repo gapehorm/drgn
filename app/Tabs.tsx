@@ -20,7 +20,7 @@ const Tabs = () => {
           <><div className='flex flex-col  justify-center items-center text-center'>
             <Image src={'https://images.guns.lol/KWEJy.png'} className='w-[80px] h-[80px]' width={11111} height={11111} alt='logo'></Image>
             <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Dragon Token</p>
-            <p className='text-[#A3531C] py-3 font-bold'>Contract address: 0x9Ac74c581a5894eE901Db015c9f86c885fB265EE</p>
+            <p className='text-[#A3531C] py-3 font-bold'>0x9Ac74c581a5894eE901Db015c9f86c885fB265EE</p>
             <p className='text-[#A3531C] font-bold max-w-[310px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut corrupti ad sequi expedita nam dolorum ipsam. Numquam eveniet impedit harum ratione?</p>
           </div>
             <div className='flex py-8 pb-14 justify-center gap-3 items-center flex-col'>
