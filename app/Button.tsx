@@ -1,18 +1,30 @@
-import Link from 'next/link'
-import React from 'react'
-interface Button {
+import Link from 'next/link';
+import React from 'react';
+
+interface ButtonProps {
   sitename: string;
   sitelink: string;
+  isTab2?: boolean; // New prop to indicate whether the button should be visible only in Tab 2
 }
 
-const Button = ({ sitename, sitelink }: Button) => {
-  sitelink = sitelink.replace('https://', '')
-  let site = 'https://' + sitelink
+const Button = ({ sitename, sitelink, isTab2 }: ButtonProps) => {
+  sitelink = sitelink.replace('https://', '');
+  let site = 'https://' + sitelink;
+
+  // Check if the button should be visible only in Tab 2
+  if (isTab2 && typeof window !== 'undefined') {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+    if (tabParam !== '2') return null; // Return null if it's not Tab 2
+  }
+
   return (
     <div className='flex justify-between border-[2px] rounded-xl py-3 px-1.5 border-[#CE5101] items-center gap-14'>
       <div>
         <p className='text-[#A3531C] text-xs font-bold'>{sitename}</p>
-        <Link className='text-[#C24A01] font-extrabold' href={site}>{sitelink}</Link>
+        <Link href={site}>
+          <a className='text-[#C24A01] font-extrabold'>{sitelink}</a>
+        </Link>
       </div>
       <Link href={site}>
         <svg width={40} height={40} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -0.5 25 25">
@@ -23,7 +35,7 @@ const Button = ({ sitename, sitelink }: Button) => {
         </svg>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
