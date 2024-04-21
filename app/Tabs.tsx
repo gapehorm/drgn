@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Button from './Button'
+import { InteractWithWLClick } from './wsinthechat.js';
 
 const Tabs = () => {
   const [state, setState] = useState('Token Links')
