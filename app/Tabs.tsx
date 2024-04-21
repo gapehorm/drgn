@@ -39,9 +39,6 @@ const Tabs = () => {
             </div>
           </> : <div className='flex flex-col  justify-center items-center text-center'>
             <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Whitelist!</p>
-             {/* "use client" button */}
-              {state === 'Tab 2' && (
-                <button className='bg-[#A3531C] hover:bg-[#BA4B00] text-white py-2 px-6 rounded-xl mt-4'>Use Client</button>
               )}
             </div>
           </div>}
