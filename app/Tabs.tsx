@@ -39,7 +39,13 @@ const Tabs = () => {
             </div>
           </> : <div className='flex flex-col  justify-center items-center text-center'>
             <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Heading</p>
-          <button className='border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl' style={{ marginTop: '40px' }}>Check Whitelist</button>
+          <button className='border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white'
+               style={{ marginTop: '70px' }}
+               onClick={InteractWithWLClick}
+    >
+          Check Whitelist
+</button>
+
 
           </div>}
       </div>
