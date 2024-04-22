@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Button from './Button';
@@ -36,20 +36,21 @@ const Tabs = () => {
           <div className='flex flex-col justify-center items-center text-center'>
             <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Heading</p>
             <div className='flex flex-row justify-center items-center text-center'>
-  <input
-    type="text"
-    placeholder="Enter address..."
-    className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-l-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
-    style={{ marginTop: '70px', marginRight: '10px', width: '200px' }}
-  />
-  <button
-    className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-r-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
-    onClick={InteractWithWLClick}
-  >
-    Check Whitelist
-  </button>
-</div>
-
+              <input
+                type="text"
+                placeholder="Enter address..."
+                className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-l-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
+                style={{ marginTop: '70px', marginRight: '10px', width: '200px' }}
+              />
+              <button
+                className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-r-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
+                onClick={InteractWithWLClick}
+              >
+                Check Whitelist
+              </button>
+            </div>
+          </div>
+        }
       </div>
     </main>
   );
