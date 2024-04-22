@@ -34,7 +34,7 @@ const checkWhitelist = async (whitelistFile, address) => {
     // Check if the address is in the whitelist content
     return whitelistContent.includes(address);
   } catch (error) {
-    console.error(`Error reading whitelist file ${whitelistFile}:`, error);
-    return false; // Return false in case of error
+    console.error("Error fetching whitelist file:", error);
+    return false;
   }
 };
