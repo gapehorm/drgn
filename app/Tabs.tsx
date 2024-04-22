@@ -40,13 +40,21 @@ const Tabs = () => {
             </div>
           </> : <div className='flex flex-col  justify-center items-center text-center'>
             <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Heading</p>
-          <button className='border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white'
-               style={{ marginTop: '70px' }}
-               onClick={InteractWithWLClick}
-    >
-          Check Whitelist
-</button>
-
+ <input
+    type="text"
+    placeholder="Enter address..."
+    className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-l-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
+    style={{ marginTop: '70px' }}
+    // Add any necessary state and onChange handler
+  />
+  <button
+    className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-r-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
+    onClick={InteractWithWLClick}
+    // Add any necessary logic for onClick
+  >
+    {/* No button text */}
+  </button>
+</div>
 
           </div>}
       </div>
