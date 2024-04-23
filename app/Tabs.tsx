@@ -56,11 +56,11 @@ const Tabs = () => {
     placeholder="Enter address..."
     value={address}
     onChange={handleInputChange}
-    className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-l-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
+    className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
     style={{ marginRight: '10px', width: '200px' }}
   />
   <button
-    className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-r-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
+    className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
     onClick={handleButtonClick}
   >
     Check Whitelist
