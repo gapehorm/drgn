@@ -15,10 +15,14 @@ const Tabs = () => {
   };
 
   // Function to handle button click
-  const handleButtonClick = () => {
-    // Call InteractWithWLClick with the address
-    const levelText = InteractWithWLClick(address);
-    setWhitelistLevelText(levelText);
+  const handleButtonClick = async () => {
+    try {
+      // Call InteractWithWLClick with the address
+      const levelText = await InteractWithWLClick(address);
+      setWhitelistLevelText(levelText);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
