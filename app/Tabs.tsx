@@ -1,3 +1,4 @@
+  "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Button from './Button';
@@ -8,7 +9,7 @@ const Tabs = () => {
   const [address, setAddress] = useState('');
 
   // Function to handle input change
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event) => {
     setAddress(event.target.value);
   };
 
