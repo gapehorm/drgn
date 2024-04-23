@@ -1,4 +1,3 @@
-"use client"
 import React, { useState, ChangeEvent } from 'react';
 import Image from 'next/image';
 import Button from './Button';
@@ -40,26 +39,13 @@ const Tabs = () => {
               <p className='text-[#A3531C] py-3 font-bold'>cryptocryptocryptocryptocryptocryptocrypto</p>
               <p className='text-[#A3531C] font-bold max-w-[310px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut corrupti ad sequi expedita nam dolorum ipsam. Numquam eveniet impedit harum ratione?</p>
             </div>
-            <div className='flex flex-row justify-center items-center text-center' style={{ marginTop: '20px' }}>
-              <input
-                type="text"
-                placeholder="Enter address..."
-                value={address}
-                onChange={handleInputChange}
-                className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-l-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
-                style={{ marginRight: '10px', width: '200px' }}
-              />
-              <Button
-                sitename='Check Whitelist'
-                onClick={handleButtonClick}
-                className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-r-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
-              />
+            <div className='flex py-8 pb-14 justify-center gap-3 items-center flex-col'>
+              <Button sitename='Example' sitelink='https://example.com' />
+              <Button sitename='Example' sitelink='https://example.com' />
+              <Button sitename='Example' sitelink='https://example.com' />
+              <Button sitename='Example' sitelink='https://example.com' />
+              <Button sitename='Example' sitelink='https://example.com' />
             </div>
-            {whitelistLevelText && (
-              <p className="text-xl mt-8" style={{ color: 'white' }}>
-                {whitelistLevelText}
-              </p>
-            )}
           </> : 
           <div className='flex flex-col justify-center items-center text-center'>
             <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Heading</p>
@@ -80,7 +66,7 @@ const Tabs = () => {
               </button>
             </div>
             {whitelistLevelText && (
-              <p className="text-xl mt-8" style={{ color: 'white' }}>
+              <p className="text-xl mt-4" style={{ color: 'white' }}>
                 {whitelistLevelText}
               </p>
             )}
