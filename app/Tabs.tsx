@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Button from './Button';
 import { InteractWithWLClick } from './wsinthechat.js';
 
-
 const Tabs = () => {
   const [state, setState] = useState('Token Links');
   const [address, setAddress] = useState('');
+  const [whitelistLevelText, setWhitelistLevelText] = useState('');
 
   // Function to handle input change
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +17,8 @@ const Tabs = () => {
   // Function to handle button click
   const handleButtonClick = () => {
     // Call InteractWithWLClick with the address
-    InteractWithWLClick(address);
+    const levelText = InteractWithWLClick(address);
+    setWhitelistLevelText(levelText);
   };
 
   return (
@@ -61,6 +62,11 @@ const Tabs = () => {
                 Check Whitelist
               </button>
             </div>
+            {whitelistLevelText && (
+              <p className="text-xl mt-4">
+                {whitelistLevelText}
+              </p>
+            )}
           </div>
         }
       </div>
