@@ -61,6 +61,7 @@ const Tabs = () => {
   <button
     className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
     onClick={handleButtonClick}
+    style={{ marginTop: '20px' }}
   >
     Check Whitelist
   </button>
