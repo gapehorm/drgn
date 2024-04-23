@@ -6,6 +6,18 @@ import { InteractWithWLClick } from './wsinthechat.js';
 
 const Tabs = () => {
   const [state, setState] = useState('Token Links');
+  const [address, setAddress] = useState('');
+
+  // Function to handle input change
+  const handleInputChange = (event) => {
+    setAddress(event.target.value);
+  };
+
+  // Function to handle button click
+  const handleButtonClick = () => {
+    // Call InteractWithWLClick with the address
+    InteractWithWLClick(address);
+  };
 
   return (
     <main className="flex bg z-10 min-h-screen flex-col items-center justify-between">
@@ -36,12 +48,14 @@ const Tabs = () => {
               <input
                 type="text"
                 placeholder="Enter address..."
+                value={address}
+                onChange={handleInputChange}
                 className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-l-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
                 style={{ marginRight: '10px', width: '200px' }}
               />
               <button
                 className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-r-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
-                onClick={InteractWithWLClick}
+                onClick={handleButtonClick}
               >
                 Check Whitelist
               </button>
