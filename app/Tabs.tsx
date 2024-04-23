@@ -67,7 +67,7 @@ const Tabs = () => {
               </button>
             </div>
             {whitelistLevelText && (
-              <p className="text-xl mt-4">
+              <p className="text-xl mt-4" style={{ color: 'white' }}>
                 {whitelistLevelText}
               </p>
             )}
