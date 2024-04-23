@@ -1,4 +1,4 @@
-export const InteractWithWLClick = async (address) => {
+export const InteractWithWLClick = async (address: string) => {
   // Define the whitelist levels and corresponding addresses
   const whitelist = {
     1: ['0x1234567890123456789012345678901234567890', '0xabcdefabcdefabcdefabcdefabcdefabcdefabcd'],
@@ -23,10 +23,14 @@ export const InteractWithWLClick = async (address) => {
 
   // If no whitelist levels found, return "NOT WHITELISTED"
   if (whitelistLevels.length === 0) {
-    return "NOT WHITELISTED";
+    const message = "NOT WHITELISTED";
+    console.log(message);
+    return message;
   }
 
   // If whitelisted, return the levels found
   const levelText = whitelistLevels.map(level => `LEVEL ${level}`).join(', ');
-  return `${levelText} WHITELISTED WOO HOO`;
+  const message = `${levelText} WHITELISTED WOO HOO`;
+  console.log(message);
+  return message;
 };
