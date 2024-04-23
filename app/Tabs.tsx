@@ -1,23 +1,24 @@
 "use client"
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Button from './Button';
 import { InteractWithWLClick } from './wsinthechat.js';
 
-
 const Tabs = () => {
   const [state, setState] = useState('Token Links');
   const [address, setAddress] = useState('');
+  const [whitelistStatus, setWhitelistStatus] = useState('');
 
   // Function to handle input change
-  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event) => {
     setAddress(event.target.value);
   };
 
   // Function to handle button click
   const handleButtonClick = () => {
     // Call InteractWithWLClick with the address
-    InteractWithWLClick(address);
+    const status = InteractWithWLClick(address);
+    setWhitelistStatus(status);
   };
 
   return (
@@ -61,6 +62,9 @@ const Tabs = () => {
                 Check Whitelist
               </button>
             </div>
+            {whitelistStatus && (
+              <p>{whitelistStatus}</p>
+            )}
           </div>
         }
       </div>
