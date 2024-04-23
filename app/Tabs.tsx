@@ -1,15 +1,16 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import Image from 'next/image';
 import Button from './Button';
 import { InteractWithWLClick } from './wsinthechat.js';
+
 
 const Tabs = () => {
   const [state, setState] = useState('Token Links');
   const [address, setAddress] = useState('');
 
   // Function to handle input change
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setAddress(event.target.value);
   };
 
