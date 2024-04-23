@@ -51,13 +51,13 @@ const Tabs = () => {
           <div className='flex flex-col justify-center items-center text-center'>
             <p className='bg-clip-text text-transparent bg-gradient-to-r from-[#F1740F] to-[#BA4B00] text-4xl font-extrabold'>Heading</p>
             <div className='flex flex-row justify-center items-center text-center' style={{ marginTop: '20px' }}>
-               <input
+               < <input
     type="text"
     placeholder="Enter address..."
     value={address}
     onChange={handleInputChange}
     className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
-    style={{ marginRight: '10px', width: '200px' }}
+    style={{ marginBottom: '10px', width: '200px' }} // Changed marginRight to marginBottom
   />
   <button
     className="border-[#BA4B00] text-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl transition-all duration-300 hover:bg-[#BA4B00] hover:text-white"
@@ -65,12 +65,11 @@ const Tabs = () => {
   >
     Check Whitelist
   </button>
-</div>
-{whitelistLevelText && (
-  <p className="text-xl mt-4" style={{ color: 'white' }}>
-    {whitelistLevelText}
-  </p>
-)}
+  {whitelistLevelText && (
+    <p className="text-xl mt-4" style={{ color: 'white' }}>
+      {whitelistLevelText}
+    </p>
+  )}
           </div>
         }
       </div>
