@@ -1,4 +1,4 @@
-export const InteractWithWLClick = async (address: string) => {
+export const InteractWithWLClick = async (address) => {
   // Define the whitelist levels and corresponding addresses
   const whitelist = {
     1: ['0x1234567890123456789012345678901234567890', '0xabcdefabcdefabcdefabcdefabcdefabcdefabcd'],
