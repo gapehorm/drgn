@@ -55,7 +55,7 @@ const Tabs = () => {
     placeholder="Enter address..."
     value={address}
     onChange={handleInputChange}
-    className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0"
+    className="border-[#BA4B00] border-[3px] px-4 py-2 rounded-full text-xl outline-none focus:border-[#BA4B00] focus:ring-0 bg-gray-800 text-white""
     style={{ marginBottom: '10px', width: '300px' }} // Adjusted width to 300px
   />
   <button
